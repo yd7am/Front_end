@@ -86,6 +86,8 @@ protocol :// hostname[:port] / path / \[:parameters][?query]#fragment
 
 ### DNS工作原理
 
+[链接](https://www.cnblogs.com/zhangxingeng/p/9970733.html#auto_id_0)
+
 **一般情况下：… . 三级域名 . 二级域名 . 顶级域名**
 
 DNS解析：
