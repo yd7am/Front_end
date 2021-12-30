@@ -1,7 +1,10 @@
 ## 计算机网络
+
 [计算机网络基础知识梳理](https://blog.csdn.net/m0_37568814/article/details/81018769?spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4.no_search_link&utm_relevant_index=7)
 
 ### http超文本传送协议 (Hypertext transfer protocol)
+
+HTTP协议定义Web客户端如何从Web服务器请求Web页面，以及服务器如何把Web页面传送给客户端。HTTP协议采用了请求/响应模型。客户端向服务器发送一个请求报文，请求报文包含请求的方法、URL、协议版本、请求头部和请求数据。服务器以一个状态行作为响应，响应的内容包括协议的版本、成功或者错误代码、服务器信息、响应头部和响应数据。
 
 [链接1](https://www.cnblogs.com/hello-web/p/10394210.html)
 
@@ -48,4 +51,18 @@ protocol :// hostname[:port] / path / \[:parameters][?query]#fragment
 > 响应头(消息报头)记录服务器相关信息如服务器是否启用压缩、服务器为IIS或Ngnix、程序所用服务端语言等等。当然，缓存也是在这里设置的，通过修改响应头可以修改html在本地缓存的情况，如设置浏览器缓存过期的时间。
 >
 > 响应体(响应正文)主要是我看到的html的相关内容了。
+
+##### 例子
+
+1、浏览器向 DNS 服务器请求解析该 URL 中的域名所对应的 IP 地址;
+
+2、解析出 IP 地址后，根据该 IP 地址和默认端口 80，和服务器建立**TCP连接**
+
+3、浏览器发出读取文件(URL 中域名后面部分对应的文件)的HTTP 请求，该请求报文作为 **TCP 三次握手**的第三个报文的数据发送给服务器;
+
+4、服务器对浏览器请求作出响应，并把对应的 html 文本发送给浏览器;
+
+5、释放 **TCP连接**
+
+6、浏览器将该 html 文本并显示内容;
 
