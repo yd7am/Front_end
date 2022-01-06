@@ -1,4 +1,6 @@
-## JavaScript包管理工具
+# JavaScript包管理工具
+
+## NPM
 
 NPM 全称 Node Package Manager，它是 JavaScript 的包管理工具, 并且是 Node.js 平台的默认包管理工具。通过NPM 可以安装、共享、分发代码,管理项目依赖关系。
 
@@ -40,7 +42,7 @@ About to write to g:\Oortcloud\Test\pm\package.json:
   "name": "npm-demo",  //包名
   "version": "1.0.0",  //版本号
   "description": "first npm demo",   //描述
-  "main": "index.js",  //程序的主入口文件 index.js
+  "main": "index.js", "xxx.js", //程序的主入口文件 index.js
   "scripts": {  //脚本命令组成的对象
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -112,6 +114,25 @@ npm err! Error: connect ECONNREFUS 27.0.0.1:8087
 //解决方法，执行如下命令：
 npm config set proxy null
 ```
+
+`npm root -g`查看全局目录路径：C:\Users\Ydam\AppData\Roaming\npm\node_modules
+
+修改全局目录路径：
+
+1. 在nodejs目录(或其他目录)下新建两个文件夹，node_cache  &  node_global
+2. `npm config set prefix "E:\\nodejs\\node_global"`
+3. `npm config set cache "E:\\nodejs\\node_cache"`
+
+`npm root -g`查看全局目录路径：E:\nodejs\node_global\node_modules
+
+修改环境变量
+
+1. 在【系统变量】下新建【NODE_PATH】，输入【E:\nodejs\node_global】
+2. 将用户变量下的【Path】中的【C:\Users\Ydam\AppData\Roaming\npm】修改为：
+
+【E:\nodejs\node_global】
+
+
 
 #### 生产环境模块
 
@@ -263,9 +284,9 @@ this is test demo!!!!!!
 >
 >如果把上面的代码运行在浏览器中(HTML 文件)的话，你会得到一个报错 `require is not defined`。因为浏览器没有对文件系统的权限。这就意味着用这种方式加载模块很难搞 -- 文件必须被动态地加载，或者同步地加载（减慢执行速度）或者异步地加载（不能保证时间顺序）。
 
-### 使用 JavaScript 模块打包工具（webpack）
+## 使用 JavaScript 模块打包工具（webpack）
 
-https://blog.csdn.net/qq_36838191/article/details/80796349
+**https://blog.csdn.net/qq_36838191/article/details/80796349**
 
 JavaScript 模块打包器是一个能在代码构建过程（有文件系统权限）绕过上述问题并打包生产出兼容于浏览器的生产版本（不再需要有文件系统权限）的工具。
 
@@ -293,6 +314,19 @@ The 'mode' option has not been set, webpack will fallback to 'production' for th
 
 https://blog.csdn.net/qq_42506411/article/details/114875492
 
+#### 全局安装webpack
+
+https://blog.csdn.net/weixin_51370367/article/details/115164263
+
+```
+C:\Windows\System32>webpack -v
+webpack: 5.65.0
+webpack-cli: 4.9.1
+webpack-dev-server not installed
+```
+
+---
+
 注意到每当我们修改 `index.js` 后都要运行 webpack 一长串的命令。而且当我们使用到 webpack 更高级的特性时就更烦了（例如使用 [generating source maps](https://link.zhihu.com/?target=https%3A//webpack.js.org/guides/development/%23using-source-maps) 帮我们从编译后的代码调试原始的代码）。Webpack 可以从项目文件的根目录中的一个叫做 `webpack.config.js`的配置文件中读取相应设置，在我们的栗子中，差不多应该配置成这样：
 
 ```javascript
@@ -314,4 +348,12 @@ module.exports={
 ```text
 $ ./node_modules/.bin/webpack 
 ```
+
+全局安装webpack和webpack-cli后(项目文件的根目录中有 `webpack.config.js`的配置文件)：
+
+```
+$ webpack   //直接执行
+```
+
+
 
