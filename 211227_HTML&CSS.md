@@ -2,17 +2,17 @@
 [CSS](https://www.runoob.com/css/css-id-class.html)
 
 ***
-####选择器
-1.ID 选择器（ID selector，IS）：使用 # 标识selector，语法格式：`#S{...}`（S为选择器名）。
-2.类选择器（class selector，CS）：使用 . 标识selector，语法格式：`.S{...}`（S为选择器名）。
-3.元素选择器（element selector，ES）：又叫标签选择器，使用标签名作为selector名，语法格式：`S{...}`（S为选择器名）。
-4.属性选择器（attribute selector，AS）。[AS](https://www.runoob.com/css/css-attribute-selectors.html)
-5.包含选择器（package selector，PS）：指定目标选择器必须处在某个选择器对应的元素内部，语法格式：`A B{...}`（A、B为HTML元素/标签，表示对处于A中的B标签有效）。
-6.子选择器（sub-selector，SS）：类似于PS，指定目标选择器必须处在某个选择器对应的元素内部，两者区别在于PS允许"子标签"甚至**"孙子标签"**及嵌套更深的标签匹配相应的样式，而SS**强制**指定目标选择器作为 包含选择器对应的标签 内部的标签(**直接子代**)，语法格式：`A>B{...}`（A、B为HTML元素/标签）。
-7.兄弟选择器（brother selector，BS）：BS是CSS3.0新增的一个选择器，语法格式：`A~B{...}`（A、B为HTML元素/标签，表示A标签匹配selector的A，B标签匹配selector的B时，B标签匹配样式）
-7.1 +选择器：`A+B{...}`如果需要选择**紧接**在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器。 
-8.通用选择器:`*{...}`它的作用是匹配 html 中的所有元素标签。
-9.待补充...
+#### 选择器
+1. ID 选择器（ID selector，IS）：使用 # 标识selector，语法格式：`#S{...}`（S为选择器名）。
+2. 类选择器（class selector，CS）：使用 . 标识selector，语法格式：`.S{...}`（S为选择器名）。
+3. 元素选择器（element selector，ES）：又叫标签选择器，使用标签名作为selector名，语法格式：`S{...}`（S为选择器名）。
+4. 属性选择器（attribute selector，AS）。[AS](https://www.runoob.com/css/css-attribute-selectors.html)
+5. 包含选择器（package selector，PS）：指定目标选择器必须处在某个选择器对应的元素内部，语法格式：`A B{...}`（A、B为HTML元素/标签，表示对处于A中的B标签有效）。
+6. 子选择器（sub-selector，SS）：类似于PS，指定目标选择器必须处在某个选择器对应的元素内部，两者区别在于PS允许"子标签"甚至**"孙子标签"**及嵌套更深的标签匹配相应的样式，而SS**强制**指定目标选择器作为 包含选择器对应的标签 内部的标签(**直接子代**)，语法格式：`A>B{...}`（A、B为HTML元素/标签）。
+7. 兄弟选择器（brother selector，BS）：BS是CSS3.0新增的一个选择器，语法格式：`A~B{...}`（A、B为HTML元素/标签，表示A标签匹配selector的A，B标签匹配selector的B时，B标签匹配样式）
+8.  +选择器：`A+B{...}`如果需要选择**紧接**在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器。 
+9. 通用选择器:`*{...}`它的作用是匹配 html 中的所有元素标签。
+10. 待补充...
 
 >一：#a,b{…………｝ //一个id叫a和一个标签是b的样式
 >二：#a b{…………｝  //一个id叫a下面的一个标签是b的样式
@@ -21,9 +21,9 @@
 >五：p.marked{ }: 为所有 class="marked" 的 p 元素指定一个样式。
 >六：.marked p{ }: 为所有 class="marked" 元素内的 p 元素指定一个样式。
 
-####样式优先级
+#### 样式优先级
 [优先级](https://www.runoob.com/w3cnote/css-style-priority.html)
-####块级元素与内联元素
+#### 块级元素与内联元素
 **块级元素(block)特性：**
 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;
 宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;
